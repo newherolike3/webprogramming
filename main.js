@@ -8,10 +8,10 @@ let obj = {
 }
 
 let obj2 = {
-    name: "Anothai",
-    lastname: "Jaidee",
-    age: 33,
-    salary: 25000,
+    name: "Phatcharamani",
+    lastname: "Ketkhuang",
+    age: 25,
+    salary: 15000,
 }
 
 const showdata = ({name, lastname, age, salary}) => ` สวัสดีคุณ ${name} ${lastname}
