@@ -1,6 +1,7 @@
-let x = 15;
-let y = 8;
-let z = x + y;
-document.getElementById("test").innerHTML = y + y;    
-document.getElementById("test2").innerHTML = x * 10;  
-document.getElementById("test3").innerHTML = z;  
+let show = "RMUTL"
+let name = "Natdanai Tinnakon"
+
+console.log("Javascript")
+console.log(show)
+console.log(name)
+//document.getElementById("show").innerHTML = show;    
