@@ -1,21 +1,29 @@
-// Natdanai Tinnakon
 /*
-week 2 - javascript
+function sum(x, y){
+    ;
+    return x + y ;
+}
 */
-let name = "Natdanai";
-let lastname;//undefined
-lastname = "Tinnakon";
-//console.log(`สวัสดีคุณ ${name} ${lastname}`);
-const PI = 3.14;
-let obj = {
-    name: "Natdanai",
-    lastname: "Tinnakon",
-    address: { 
-     Number:"99/8",
-     province: "พิษณุโลก"
-    }
-};
-console.log(onj.name)
-console.log(onj.lastname);
-console.log(onj.address.Number);
-console.log(onj.address.province);
+const sum = (x, y) => x + y ;
+const minus = (x, y) => x - y ;
+const multi = (x, y) => x * y ;
+const div = (x, y) => x / y ;
+let x = sum(5,10);
+let y = minus(40,30);
+let z = multi(8,5);
+let i = div(100,2);
+sum(1,2);
+sum(2,4);
+sum(5,6);
+sum(7,8);
+console.log (``);
+
+/*function sum(x,y)  {
+    console.log("Show Sum");
+    console.log(x + y);
+
+
+}
+*/
+
+
