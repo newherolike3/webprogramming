@@ -1,29 +1,34 @@
-/*
-function sum(x, y){
-    ;
-    return x + y ;
+// Destructuring
+
+let obj = {
+    name: "Natdanai",
+    lastname: "Tinnakon",
+    age: 22,
+    salary: 15000,
 }
-*/
-const sum = (x, y) => x + y ;
-const minus = (x, y) => x - y ;
-const multi = (x, y) => x * y ;
-const div = (x, y) => x / y ;
-let x = sum(5,10);
-let y = minus(40,30);
-let z = multi(8,5);
-let i = div(100,2);
-sum(1,2);
-sum(2,4);
-sum(5,6);
-sum(7,8);
-console.log (``);
 
-/*function sum(x,y)  {
-    console.log("Show Sum");
-    console.log(x + y);
-
-
+let obj2 = {
+    name: "Anothai",
+    lastname: "Jaidee",
+    age: 33,
+    salary: 25000,
 }
-*/
+
+const showdata = ({name, lastname, age, salary}) => ` สวัสดีคุณ ${name} ${lastname}
+ ขณะนี้คุณมีอายุ ${age}
+ เงินเดือนของคุณเท่ากับ ${salary}
+`;
+
+console.log(showdata(obj));
+console.log(showdata(obj2));
 
 
+// Spread Operator
+
+const fun = (x, y, z) => x + y + z;
+
+let num = [5, 6, 7];
+
+let res = fun(...num); //...num   fun(5, 6, 7);
+
+console.log(res);
