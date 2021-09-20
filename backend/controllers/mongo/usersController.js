@@ -10,9 +10,11 @@ exports.index = async (req, res, next) => {
 
 exports.insert = async (req, res, next) => {
 
+
 let data  = new users({
     username: req.body.username,
-    email: req.body.email
+    email: req.body.email,
+    password: req.body.password
 });
 
 data .save();
