@@ -16,7 +16,9 @@
               <router-link class="nav-link" to="/products">สินค้า</router-link>
             </li>
           </ul>
-          <span class="text-white p-2">สวัสดีคุณ {{ username }} ({{ email }})</span>
+          <span class="text-white p-2"
+            >สวัสดีคุณ {{ username }} ({{ email }})</span
+          >
           <button @click="logout" type="button" class="btn btn-outline-danger">
             Logout
           </button>
@@ -115,12 +117,10 @@
 <script>
 import axios from "axios";
 import Swal from "sweetalert2";
-
 export default {
   mounted() {
     this.email = localStorage.getItem("email");
     this.username = localStorage.getItem("username");
-
     this.load_customer();
   },
   data() {
@@ -142,7 +142,6 @@ export default {
       // customerFirstName: String,
       // customerLastName: String,
       // customerEmail: String,
-
       axios
         .post("http://localhost:3000/mongo/customers", {
           customerID: this.customerID,
@@ -161,7 +160,6 @@ export default {
             timer: 1500,
           });
         });
-
       setTimeout(() => {
         this.load_customer();
       }, 1000);
@@ -177,7 +175,6 @@ export default {
         data = res.data;
         // this.customers = res.data;
       });
-
       setTimeout(() => {
         this.customers = data;
       }, 1000);

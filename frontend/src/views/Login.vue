@@ -43,7 +43,6 @@
 <script>
 import axios from "axios";
 import Swal from "sweetalert2";
-
 export default {
   data() {
     return {
@@ -61,7 +60,6 @@ export default {
               "กรุณากรอกชื่อผู้ใช้",
               "warning"
             );
-
       } else if(this.password.trim() === ""){
         // alert("กรุณากรอกรหัสผ่าน");
             Swal.fire(
@@ -70,22 +68,17 @@ export default {
               "warning"
             );
       } else {
-
         // console.log(this.username.trim());
         // console.log(this.password.trim());
-
         let data = {
           username: this.username.trim(),
           password: this.password.trim()
         };
-
         axios
         .post("http://localhost:3000/mongo/users/login", data)
         .then(function(res){
           // console.log(res.data);
-
           if(res.data.status === 0){
-
             // ถ้าผู้ใช้ไม่มี
             // alert(res.data.message);
             Swal.fire(
@@ -93,9 +86,7 @@ export default {
               res.data.message,
               "error"
             );
-
           } else if(res.data.status === 1){
-
             // ถ้าผู้ใช้มี
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("status", res.data.status);
@@ -103,9 +94,7 @@ export default {
             localStorage.setItem("username", res.data.username);
             
           }
-
         });
-
         setTimeout(() => {
           this.$router.push({ name: "Home" });
         }, 1000);

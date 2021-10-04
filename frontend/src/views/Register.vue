@@ -59,7 +59,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 import bcrypt from "bcryptjs";
-
 export default {
   data() {
     return {
@@ -93,9 +92,7 @@ export default {
               "warning"
             );
       } else {
-
         if(this.regex.test(this.email)) {
-
             // console.log(this.email);
             // console.log(this.username);
             console.log(this.password);
@@ -103,12 +100,10 @@ export default {
             const email = this.email;
             const username = this.username;
             const password = this.password;
-
             bcrypt.genSalt(10, function(err, salt) {
                 bcrypt.hash(password , salt, function(err, hash) {
                     // Store hash in your password DB.
                     console.log(hash);
-
                     axios.post("http://localhost:3000/mongo/users", {
                         email: email,
                         username: username,
@@ -124,14 +119,10 @@ export default {
                           timer: 2000
                         })
                     });
-
                 });
             });
-
             
-
             this.$router.push({name: "Login"});
-
         } else {
             // alert("คุณกรอกอีเมลไม่ถูกต้อง");
             Swal.fire(
@@ -140,7 +131,6 @@ export default {
               "warning"
             );
         }
-
       }
     },
     back() {
